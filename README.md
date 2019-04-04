@@ -59,7 +59,9 @@ player wins the entire pot.
 
 ## Hint
 
-It could be helpful to have a class to represent each Player.
+- Adding a property for the "value" of a rank could make it easier to compare
+  face cards (ie: Jack < Queen).
+- It could be helpful to have a class to represent each Player.
 
 ## Plagiarism
 
