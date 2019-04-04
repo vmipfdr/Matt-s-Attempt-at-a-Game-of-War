@@ -10,7 +10,8 @@ Two players start the game by splitting a deck of 52 standard playing cards
 evenly. Each stack is facedown, and players cannot look at the cards in their
 stack or rearrange them.
 
-The objective of the game is to play until one player has all 52 cards in their stack.
+The objective of the game is to play until one player has all 52 cards in their
+stack.
 
 To play, each player reveals the top card in their stack. The player who played
 the card with the higher rank (Aces high) takes both cards and puts them at the
@@ -40,14 +41,21 @@ Please turn in your submission by the deadline on your cohort calendar.
 
 1. Create a class for a Card, with the properties "suite" and "rank".
 2. Use the Card class generate a standard deck of 52 playing cards.
-3. "Shuffle" the deck and distribute it evenly to two players - one user, one computer
-4. Add the functionality for the user to "play", and handle the logic for adding the cards to bottom of the stack of the winning player.
-5. In the case of the tie, each player takes the card they played and places it at the bottom of their stack, and then the game automatically plays the next round.
-6. Once one player has all 52 cards in their stack, end the game and declare them the winner!
+3. "Shuffle" the deck and distribute it evenly to two players - one user, one
+   computer
+4. Add the functionality for the user to "play", and handle the logic for adding
+   the cards to bottom of the stack of the winning player.
+5. In the case of the tie, each player takes the card they played and places it
+   at the bottom of their stack, and then the game automatically plays the next
+   round.
+6. Once one player has all 52 cards in their stack, end the game and declare
+   them the winner!
 
 ## Bonus
 
-Add the logic to resolve ties the same way as the original card game, where each player places three more cards face down and reveals a new top card until one player wins the entire pot.
+Add the logic to resolve ties the same way as the original card game, where each
+player places three more cards face down and reveals a new top card until one
+player wins the entire pot.
 
 ## Hint
 
