@@ -40,15 +40,17 @@ Please turn in your submission by the deadline on your cohort calendar.
 ## Requirements
 
 1. Create a class for a Card, with the properties "suite" and "rank".
-2. Use the Card class generate a standard deck of 52 playing cards.
-3. "Shuffle" the deck and distribute it evenly to two players - one user, one
+2. Create a class for a Player, with the property "stack".
+3. Use the Card class generate a standard deck of 52 playing cards, and use the
+   Player class to generate two Players for the game.
+4. "Shuffle" the deck and distribute it evenly to two players - one user, one
    computer
-4. Add the functionality for the user to "play", and handle the logic for adding
+5. Add the functionality for the user to "play", and handle the logic for adding
    the cards to bottom of the stack of the winning player.
-5. In the case of the tie, each player takes the card they played and places it
+6. In the case of the tie, each player takes the card they played and places it
    at the bottom of their stack, and then the game automatically plays the next
    round.
-6. Once one player has all 52 cards in their stack, end the game and declare
+7. Once one player has all 52 cards in their stack, end the game and declare
    them the winner!
 
 ## Bonus
@@ -61,7 +63,8 @@ player wins the entire pot.
 
 - Adding a property for the "value" of a rank could make it easier to compare
   face cards (ie: Jack < Queen).
-- It could be helpful to have a class to represent each Player.
+- It could be helpful to have a class to represent the overall Game,
+  particularly when handling ties and other complicated game states.
 
 ## Plagiarism
 
