@@ -15,7 +15,7 @@ stack.
 
 To play, each player reveals the top card in their stack. The player who played
 the card with the higher rank (Aces high) takes both cards and puts them at the
-bottom of their stack in an arbitray order.
+bottom of their stack in an arbitrary order.
 
 If there is a tie, then it's War! In the card game each player adds places the
 top three cards of their stack face down, and then each player reveals the top
@@ -40,11 +40,12 @@ Please turn in your submission by the deadline on your cohort calendar.
 ## Requirements
 
 1. Create a class for a Card, with the properties "suite" and "rank".
-2. Create a class for a Player, with the property "stack".
-3. Use the Card class generate a standard deck of 52 playing cards, and use the
-   Player class to generate two Players for the game.
-4. "Shuffle" the deck and distribute it evenly to two players - one user, one
-   computer
+2. Create a class for a Player, with the property "stack" as an array. This will
+   hold the cards.
+3. Using the Card class, generate a standard deck of 52 playing cards, and use
+   the Player class to generate two Players for the game.
+4. ["Shuffle"](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
+   the deck and distribute it evenly to two players - one user, one computer.
 5. Add the functionality for the user to "play", and handle the logic for adding
    the cards to bottom of the stack of the winning player.
 6. In the case of the tie, each player takes the card they played and places it
@@ -62,7 +63,8 @@ player wins the entire pot.
 ## Hint
 
 - Adding a property for the "value" of a rank could make it easier to compare
-  face cards (ie: Jack < Queen).
+  face cards (ie: Jack < Queen). For example, 2-10 will represent each number
+  and then 11, 12, 13, 14 for J Q K A, respectively.
 - It could be helpful to have a class to represent the overall Game,
   particularly when handling ties and other complicated game states.
 
