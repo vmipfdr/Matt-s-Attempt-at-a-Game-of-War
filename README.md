@@ -22,7 +22,7 @@ stack.
 1. Change into the new directory.
 1. Fulfill the listed requirements.
 
-Perform all your work inside the [`lib/`](lib/) directory. You are required to
+Perform all your work inside the [`src/`](src/) directory. You are required to
 turn in your submission by making a pull request on the original repository.
 
 ## Requirements
