@@ -38,7 +38,7 @@ there is another tie the process repeats until there is a winner.
 
 (Don't worry, for MVP we simplify how to handle a tie.)
 
-### Requirements
+### Technical Requirements
 
 1. Create a class for a `Card`, with the properties "suit" and "rank".
 2. Create a class for a `Player`, with the property "stack" as an array. This will
