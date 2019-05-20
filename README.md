@@ -1,8 +1,6 @@
-# Lab: Game of War
-
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-## Description
+# Game of War
 
 Remember the card game ["War"](https://bicyclecards.com/how-to-play/war/)?
 
@@ -12,6 +10,22 @@ stack or rearrange them.
 
 The objective of the game is to play until one player has all 52 cards in their
 stack.
+
+## Prerequisites
+
+- Javascript
+- Object Oriented Programming
+
+## Instructions
+
+1. Fork and clone this repository.
+1. Change into the new directory.
+1. Fulfill the listed requirements.
+
+Perform all your work inside the [`lib/`](lib/) directory. You are required to
+turn in your submission by making a pull request on the original repository.
+
+## Requirements
 
 To play, each player reveals the top card in their stack. The player who played
 the card with the higher rank (Aces high) takes both cards and puts them at the
@@ -24,26 +38,13 @@ there is another tie the process repeats until there is a winner.
 
 (Don't worry, for MVP we simplify how to handle a tie.)
 
-## Prerequisites
+### Requirements
 
-- Javascript
-- Object Oriented Programming
-
-## Instructions
-
-1. Fork and clone this repository.
-2. Change into the new directory.
-3. Fulfill the listed requirements.
-
-Please turn in your submission by the deadline on your cohort calendar.
-
-## Requirements
-
-1. Create a class for a Card, with the properties "suite" and "rank".
-2. Create a class for a Player, with the property "stack" as an array. This will
-   hold the cards.
-3. Using the Card class, generate a standard deck of 52 playing cards, and use
-   the Player class to generate two Players for the game.
+1. Create a class for a `Card`, with the properties "suit" and "rank".
+2. Create a class for a `Player`, with the property "stack" as an array. This will
+   hold the player's cards.
+3. Using the `Card` class, generate a standard deck of 52 playing cards, and use
+   the `Player` class to generate two Players for the game.
 4. ["Shuffle"](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
    the deck and distribute it evenly to two players - one user, one computer.
 5. Add the functionality for the user to "play", and handle the logic for adding
@@ -70,12 +71,10 @@ player wins the entire pot.
 
 ## Plagiarism
 
-Take a moment to refamiliarize yourself with the
-[Plagiarism policy](https://git.generalassemb.ly/DC-WDI/Administrative/blob/master/plagiarism.md).
-Plagiarized work will not be accepted.
+Take a moment to refamiliarize yourself with the [Plagiarism policy](https://git.generalassemb.ly/DC-WDI/Administrative/blob/master/plagiarism.md). Plagiarized work will not be accepted.
 
 ## [License](LICENSE)
 
 1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
-2.  All software code is licensed under GNU GPLv3. For commercial use or
+1.  All software code is licensed under GNU GPLv3. For commercial use or
     alternative licensing, please contact legal@ga.co.
