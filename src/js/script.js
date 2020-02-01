@@ -41,23 +41,50 @@ let dealCards = () => {
 dealCards(deck);
 console.log('cards dealt');
 
-
 let flip = () => {
 	tabledeck.push(playerone[0], playertwo[0]);
 	playerone.splice(0,1);
 	playertwo.splice(0,1);
 	console.log('flipped');
-	if (tabledeck[0] < tabledeck[1]); {
-		tabledeck.splice(0,2);
+	if (tabledeck[0].faces > tabledeck[1].faces) {
 		playerone.push(tabledeck[0], tabledeck[0]);
-	} else if (tabledeck[1] < tabledeck[0]); {
-		tabledeck.splice(0,2);
+		tabledeck.splice(0,2)
+	} else if (tabledeck[1].faces > tabledeck[0].faces) {
 		playertwo.push(tabledeck[0], tabledeck[0]);
-	} else 
+		tabledeck.splice(0,2)
+	}
 }
 
-flip(tabledeck)
-console.log(tabledeck);
+flip(tabledeck);
+console.log(playerone, playertwo, tabledeck);
+
+
+
+
+
+
+// let flip = () => {
+// 	tabledeck.push(playerone[0], playertwo[0]);
+// 	playerone.splice(0,1);
+// 	playertwo.splice(0,1);
+// 	console.log('flipped');
+// }
+
+// flip(tabledeck);
+// console.log(tabledeck);
+
+// if (tabledeck[0].faces < tabledeck[1].faces); {
+// 	tabledeck.splice(0,2);
+// 	playerone.push(tabledeck[0], tabledeck[0]);
+// } else if (tabledeck[1].faces < tabledeck[0].faces); {
+// 	tabledeck.splice(0,2);
+// 	playertwo.push(tabledeck[0], tabledeck[0]);
+// }
+
+
+
+// flip(tabledeck)
+// console.log(tabledeck);
 
 // let battle = () => {
 // 	if (playerone.length !== 0) {
@@ -72,13 +99,16 @@ console.log(tabledeck);
 // 		playertwo.splice(0,1);
 // 		console.log('flipped');
 // 	if (tabledeck[0] > tabledeck[1]) {
-// 		playerone.push(tabledeck[0], tabledeck[1]);
+// 		playerone.push(tabledeck[0]faces, tabledeck[1].faces);
 // 	}
-// 	else if (tabledeck[1] > tabledeck[0]) {
+// 	else if (tabledeck[1].faces > tabledeck[0].faces) {
 // 		playertwo.push(tabledeck[0], tabledeck[1]);
 // 	}
 // 	}
 // }
+
+// battle(tabledeck);
+// console.log(tabledeck);
 
 // while (playerone.length !== 0 || playertwo.length !==0) {
 // 	if (playerone.length < 0) {
