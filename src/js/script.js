@@ -1,18 +1,18 @@
 //Requirements to play war
-//1. build car deck
-	//consider using a for loop initializing at 2 and going <=10
-	//consider using the print this 4 times
-	//put these into objects
-//2. build deck shuffling system
-//3. build card distribution system
-//4. build card flipping system
-//5. build round winning collection (if statement?)
-//6. build 
+//3. build card distribution system (splice into playerone and playertwo)
+//4. build card flipping system (unshift from each array into tableDeck)  this is where all the work is
+	//this has to have an if statement for one card higher than another
+	//another else if statement for two cards of same value (total war) (unshift 3 cards, then flip the last)
+	//build round winning collection (if statement that's used in two places?!)
+//6. build a simple announce winner if either player array is empty
 
 let deck = [];
 let suits = ['Hearts','Diamonds','Clubs','Spades'];
 let faces = [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
-let fullDeck = []
+let playerone = [];
+let playertwo = [];
+let tableDeck = [];
+
 
 for (let i = 0; i < suits.length; i++){
 	let suit = suits[i];
@@ -23,22 +23,52 @@ for (let i = 0; i < suits.length; i++){
 			face: face,
 		}
 		deck.push(card)
+		console.log('cards built')
 	}
 }
+let shuffle = (array) => {
+	for (var i = array.length - 1; i > 0; i--){
+		var j = Math.floor(Math.random()* (i + 1));
+		var temp = array[i];
+		array[i] = array [j];
+		array[j] = temp;
+	}
+	return array;
+}
+
+shuffle(deck);
+console.log('cards shuffled')
+
+let dealCards = () => {
+	playerone = deck.splice(0, 26)
+	playertwo = deck.splice(0, 26)
+}
+
+dealCards(deck);
+console.log('cards dealt');
 
 
 
 
-// // let cards = concat(suits + card)
-// // let player = ['Player1', 'Player2'];
-// // cards.buildCards (cards) => console.log()
-// const makePerson = (firstname, lastname) => {
-// 	return{firstname: firstname, lastname: lastname}
-// }
-// console.log(makePerson('Zakk', 'F'))
 
 
 
-// playing round 
-// var cards = ['a','b', 'c', 'd', 'e', 'f'];
-// cards.forEach(letter => console.log(letter));
+
+
+
+
+
+
+// let deal = (deck) => {
+// 	for (var i = deck.length; i > 0; i / 2){
+// 		var j = Math.floor(deck.slice(0, 25));
+// 		var temp = playerone[i];
+// 		deck[i] = deck [j];
+// 		playertwo[j] = temp;
+// 	}
+// 	return deck;
+// };
+
+
+
+
