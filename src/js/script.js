@@ -1,17 +1,11 @@
-//Requirements to play war
-//3. build card distribution system (splice into playerone and playertwo)
-//4. build card flipping system (unshift from each array into tableDeck)  this is where all the work is
-	//this has to have an if statement for one card higher than another
-	//another else if statement for two cards of same value (total war) (unshift 3 cards, then flip the last)
-	//build round winning collection (if statement that's used in two places?!)
-//6. build a simple announce winner if either player array is empty
+
 
 let deck = [];
 let suits = ['Hearts','Diamonds','Clubs','Spades'];
 let faces = [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 let playerone = [];
 let playertwo = [];
-let tableDeck = [];
+let tabledeck = [];
 
 
 for (let i = 0; i < suits.length; i++){
@@ -48,26 +42,88 @@ dealCards(deck);
 console.log('cards dealt');
 
 
+let flip = () => {
+	tabledeck.push(playerone[0], playertwo[0]);
+	playerone.splice(0,1);
+	playertwo.splice(0,1);
+	console.log('flipped');
+	if (tabledeck[0] < tabledeck[1]); {
+		tabledeck.splice(0,2);
+		playerone.push(tabledeck[0], tabledeck[0]);
+	} else if (tabledeck[1] < tabledeck[0]); {
+		tabledeck.splice(0,2);
+		playertwo.push(tabledeck[0], tabledeck[0]);
+	} else 
+}
 
+flip(tabledeck)
+console.log(tabledeck);
 
-
-
-
-
-
-
-
-
-
-// let deal = (deck) => {
-// 	for (var i = deck.length; i > 0; i / 2){
-// 		var j = Math.floor(deck.slice(0, 25));
-// 		var temp = playerone[i];
-// 		deck[i] = deck [j];
-// 		playertwo[j] = temp;
+// let battle = () => {
+// 	if (playerone.length !== 0) {
+// 		flip();
 // 	}
-// 	return deck;
-// };
+// 	else if (playertwo.length !== 0) {
+// 		flip();
+// 	}
+// 	let flip = () => {
+// 		tabledeck.push(playerone[0], playertwo[0]);
+// 		playerone.splice(0,1);
+// 		playertwo.splice(0,1);
+// 		console.log('flipped');
+// 	if (tabledeck[0] > tabledeck[1]) {
+// 		playerone.push(tabledeck[0], tabledeck[1]);
+// 	}
+// 	else if (tabledeck[1] > tabledeck[0]) {
+// 		playertwo.push(tabledeck[0], tabledeck[1]);
+// 	}
+// 	}
+// }
+
+// while (playerone.length !== 0 || playertwo.length !==0) {
+// 	if (playerone.length < 0) {
+// 		flip();
+// 	}
+// 	else if (playertwo.length < 0) {
+// 		flip();
+// 	}
+// }
+
+
+
+
+
+
+
+//Requirements to play war
+//4. build card flipping system (unshift from each array into tableDeck)  this is where all the work is
+	//this has to have an if statement for one card higher than another
+	//another else if statement for two cards of same value (total war) (unshift 3 cards, then flip the last)
+	//build round winning collection (if statement that's used in two places?!)
+//6. build a simple announce winner if either player array is empty
+
+	// function that flips cards from player arrays into tabledeck
+		// make sure playerOne always puts their card in first
+		// if playerOne card is higher than playerTwo = pop both cards into playerOne array
+		// else if playerTwo card is higher than playerOne = pop both cards into playerTwo array
+		// else if both cards are equal than play totalWar
+			//function total war
+				// if playerOne.length < 3 can't play
+				// if playerTwo.length < 3 can't play		
+				// bring in 4 cards compare the last statement
+					//if playerOne card is higher than playerTwo = pop both cards into playerOne array
+					// else if playerTwo card is higher than playerOne = pop both cards into playerTwo array
+					// else if both cards are equal than play totalWar
+
+
+
+
+
+
+
+
+
+
 
 
 
