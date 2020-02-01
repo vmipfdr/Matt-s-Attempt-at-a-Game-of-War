@@ -45,17 +45,38 @@ let flip = () => {
 	tabledeck.push(playerone[0], playertwo[0]);
 	playerone.splice(0,1);
 	playertwo.splice(0,1);
-	console.log('flipped');
-	if (tabledeck[0].faces > tabledeck[1].faces) {
-		playerone.push(tabledeck[0], tabledeck[0]);
+	console.log('shot');
+	if (tabledeck[0].face > tabledeck[1].face) {
+		playerone.push(tabledeck[0], tabledeck[1]);
 		tabledeck.splice(0,2)
-	} else if (tabledeck[1].faces > tabledeck[0].faces) {
-		playertwo.push(tabledeck[0], tabledeck[0]);
+	} else if (tabledeck[1].face > tabledeck[0].face) {
+		playertwo.push(tabledeck[0], tabledeck[1]);
 		tabledeck.splice(0,2)
+	} else if (tabledeck[0].face = tabledeck[1].face) {
+		goToWar();
 	}
 }
 
-flip(tabledeck);
+let goToWar = () => {
+	// needs some refinement on amount of cards collected
+	tabledeck.push(playerone[0, 3], playertwo[0, 3]);
+	playerone.splice(0, 3);
+	playertwo.splice(0, 3);
+	console.log('fire for effect');
+	if (tabledeck[0].face > tabledeck[1].face) {
+			playerone.push(tabledeck[0], tabledeck[1]);
+			// account for all of the cards won
+			tabledeck.splice(0,3)
+		} else if (tabledeck[1].face > tabledeck[0].face) {
+			playertwo.push(tabledeck[0], tabledeck[1]);
+			// account for all of the cards won
+			tabledeck.splice(0,3)
+		} else if (tabledeck[0].face = tabledeck[1].face) {
+			goToWar();
+		}
+}
+
+goToWar(tabledeck);
 console.log(playerone, playertwo, tabledeck);
 
 
