@@ -39,7 +39,8 @@ let dealCards = () => {
 }
 
 dealCards(deck);
-console.log('cards dealt');
+console.log('ammo distroed');
+console.log(playerone, playertwo, tabledeck);
 
 let flip = () => {
 	tabledeck.push(playerone[0], playertwo[0]);
@@ -57,9 +58,13 @@ let flip = () => {
 	}
 }
 
+flip(tabledeck);
+console.log('round complete');
+console.log(playerone, playertwo, tabledeck);
+
 let goToWar = () => {
 	// needs some refinement on amount of cards collected
-	tabledeck.push(tabledeck.push(playerone[0], playerone[1], playerone[2], playerone[3], playertwo[0], playertwo[1], playertwo[2], playertwo[3]));
+	tabledeck.push(playerone[0], playerone[1], playerone[2], playerone[3], playertwo[0], playertwo[1], playertwo[2], playertwo[3]);
 	playerone.splice(0, 3);
 	playertwo.splice(0, 3);
 	console.log('fire for effect');
@@ -85,8 +90,8 @@ let goToWar = () => {
 // }
 
 
-goToWar(tabledeck);
-console.log(playerone, playertwo, tabledeck);
+// goToWar(tabledeck);
+// console.log(playerone, playertwo, tabledeck);
 
 
 
