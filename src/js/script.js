@@ -27,8 +27,8 @@ let shuffle = (array) => {
 		array[i] = array [j];
 		array[j] = temp;
 	}
-	return array;
 	console.log('shuffled');
+	return array;
 }
 
 let reShuffle = (array) => {
@@ -38,8 +38,8 @@ let reShuffle = (array) => {
 		array[i] = array [j];
 		array[j] = temp;
 	}
-	return array;
 	console.log('shuffled');
+	return array;
 }
 
 // shuffle(deck);
@@ -50,9 +50,9 @@ let dealCards = () => {
 	playertwo = deck.splice(0, 26)
 }
 
-dealCards(deck);
-console.log('ammo distroed');
-console.log(playerone, playertwo, tabledeck);
+// dealCards(deck);
+// console.log('ammo distroed');
+// console.log(playerone, playertwo, tabledeck);
 
 let flip = () => {
 	tabledeck.push(playerone[0], playertwo[0]);
@@ -61,12 +61,12 @@ let flip = () => {
 	console.log('shot');
 	if (tabledeck[0].face > tabledeck[1].face) {
 		playerone.push(tabledeck[0], tabledeck[1]);
-		tabledeck.splice(0,2)
+		tabledeck.shift(0,2)
 		console.log('playerone won');
 		console.log(playerone, playertwo, tabledeck);
 	} else if (tabledeck[1].face > tabledeck[0].face) {
 		playertwo.push(tabledeck[0], tabledeck[1]);
-		tabledeck.splice(0,2)
+		tabledeck.shift(0,2)
 		console.log('playertwo won')
 		console.log(playerone, playertwo, tabledeck);
 	} else if (tabledeck[0].face = tabledeck[1].face) {
@@ -76,9 +76,9 @@ let flip = () => {
 	}
 }
 
-flip(tabledeck);
-console.log('round complete');
-console.log(playerone, playertwo, tabledeck);
+// flip(tabledeck);
+// console.log('round complete');
+// console.log(playerone, playertwo, tabledeck);
 
 let goToWar = () => {
 	tabledeck.push(playerone[0], playerone[1], playerone[2], playerone[3], playertwo[0], playertwo[1], playertwo[2], playertwo[3]);
@@ -89,13 +89,13 @@ let goToWar = () => {
 	if (tabledeck[3].face > tabledeck[7].face) {
 			console.log(tabledeck.length);
 			playerone.push(tabledeck.length);
-			tabledeck.splice(tabledeck.length);
+			tabledeck.shift(tabledeck.length);
 			console.log('playerone won');
 			console.log(playerone, playertwo, tabledeck);
 		} else if (tabledeck[7].face > tabledeck[3].face) {
 			console.log(tabledeck.length);
 			playertwo.push(tabledeck.length);
-			tabledeck.splice(tabledeck.length);
+			tabledeck.shift(tabledeck.length);
 			console.log('playertwo won');
 			console.log(playerone, playertwo, tabledeck);
 		} else if (tabledeck[3].face = tabledeck[7].face) {
@@ -104,7 +104,6 @@ let goToWar = () => {
 			console.log(playerone, playertwo, tabledeck);
 		}
 }
-
 
 
 
