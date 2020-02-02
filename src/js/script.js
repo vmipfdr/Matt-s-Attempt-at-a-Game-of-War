@@ -59,15 +59,15 @@ let flip = () => {
 
 let goToWar = () => {
 	// needs some refinement on amount of cards collected
-	tabledeck.push(playerone[0, 3], playertwo[0, 3]);
+	tabledeck.push(tabledeck.push(playerone[0], playerone[1], playerone[2], playerone[3], playertwo[0], playertwo[1], playertwo[2], playertwo[3]));
 	playerone.splice(0, 3);
 	playertwo.splice(0, 3);
 	console.log('fire for effect');
-	if (tabledeck[0].face > tabledeck[1].face) {
+	if (tabledeck[1].face > tabledeck[7].face) {
 			playerone.push(tabledeck[0], tabledeck[1]);
 			// account for all of the cards won
 			tabledeck.splice(0,3)
-		} else if (tabledeck[1].face > tabledeck[0].face) {
+		} else if (tabledeck[7].face > tabledeck[0].face) {
 			playertwo.push(tabledeck[0], tabledeck[1]);
 			// account for all of the cards won
 			tabledeck.splice(0,3)
@@ -75,6 +75,15 @@ let goToWar = () => {
 			goToWar();
 		}
 }
+
+// let goToWar = () => {
+// 	// needs some refinement on amount of cards collected
+// 	tabledeck.push(tabledeck.push(playerone[0], playerone[1], playerone[2], playerone[3], playertwo[0], playertwo[1], playertwo[2], playertwo[3]));
+// 	playerone.splice(0, 3);
+// 	playertwo.splice(0, 3);
+// 	console.log('fire for effect');
+// }
+
 
 goToWar(tabledeck);
 console.log(playerone, playertwo, tabledeck);
