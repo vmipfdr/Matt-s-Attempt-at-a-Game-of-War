@@ -28,6 +28,7 @@ let shuffle = (array) => {
 		array[j] = temp;
 	}
 	return array;
+	console.log('shuffled');
 }
 
 let reShuffle = (array) => {
@@ -38,10 +39,11 @@ let reShuffle = (array) => {
 		array[j] = temp;
 	}
 	return array;
+	console.log('shuffled');
 }
 
-shuffle(deck);
-console.log('cards shuffled')
+// shuffle(deck);
+// console.log('cards shuffled')
 
 let dealCards = () => {
 	playerone = deck.splice(0, 26)
@@ -60,11 +62,17 @@ let flip = () => {
 	if (tabledeck[0].face > tabledeck[1].face) {
 		playerone.push(tabledeck[0], tabledeck[1]);
 		tabledeck.splice(0,2)
+		console.log('playerone won');
+		console.log(playerone, playertwo, tabledeck);
 	} else if (tabledeck[1].face > tabledeck[0].face) {
 		playertwo.push(tabledeck[0], tabledeck[1]);
 		tabledeck.splice(0,2)
+		console.log('playertwo won')
+		console.log(playerone, playertwo, tabledeck);
 	} else if (tabledeck[0].face = tabledeck[1].face) {
 		goToWar();
+		console.log('WAR!')
+		console.log(playerone, playertwo, tabledeck);
 	}
 }
 
@@ -82,14 +90,43 @@ let goToWar = () => {
 			console.log(tabledeck.length);
 			playerone.push(tabledeck.length);
 			tabledeck.splice(tabledeck.length);
+			console.log('playerone won');
+			console.log(playerone, playertwo, tabledeck);
 		} else if (tabledeck[7].face > tabledeck[3].face) {
 			console.log(tabledeck.length);
 			playertwo.push(tabledeck.length);
 			tabledeck.splice(tabledeck.length);
-		// } else if (tabledeck[3].face = tabledeck[7].face) {
-		// 	goToWar();
+			console.log('playertwo won');
+			console.log(playerone, playertwo, tabledeck);
+		} else if (tabledeck[3].face = tabledeck[7].face) {
+			goToWar();
+			console.log('WAR!');
+			console.log(playerone, playertwo, tabledeck);
 		}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // let goToWar = () => {
 // 	// needs some refinement on amount of cards collected
