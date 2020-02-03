@@ -16,8 +16,8 @@ for (let i = 0; i < suits.length; i++){
 			suit: suit,
 			face: face,
 		}
-		deck.push(card)
-		console.log('cards built')
+		deck.push(card); 
+		console.log('cards built');
 	}
 }
 let shuffle = (array) => {
@@ -38,7 +38,7 @@ let reShuffle = (array) => {
 		array[i] = array [j];
 		array[j] = temp;
 	}
-	console.log('shuffled');
+	console.log('reshuffled');
 	return array;
 }
 
@@ -56,9 +56,10 @@ let dealCards = () => {
 
 let flip = () => {
 	tabledeck.push(playerone[0], playertwo[0]);
-	playerone.splice(0,1);
-	playertwo.splice(0,1);
-	console.log('shot');
+	playerone.shift(0,1);
+	playertwo.shift(0,1);
+	console.log('flipped');
+	// console.log(tabledeck);
 	if (tabledeck[0].face > tabledeck[1].face) {
 		playerone.push(tabledeck[0], tabledeck[1]);
 		tabledeck.splice(0,2)
@@ -70,10 +71,12 @@ let flip = () => {
 		console.log('playertwo won')
 		console.log(playerone, playertwo, tabledeck);
 	} else if (tabledeck[0].face = tabledeck[1].face) {
+		console.log(tabledeck);
 		goToWar();
 		console.log('WAR!')
 		console.log(playerone, playertwo, tabledeck);
 	}
+	reShuffle(playerone, playertwo);
 }
 
 // flip(tabledeck);
@@ -82,23 +85,23 @@ let flip = () => {
 
 let goToWar = () => {
 	tabledeck.push(playerone[0], playerone[1], playerone[2], playerone[3], playertwo[0], playertwo[1], playertwo[2], playertwo[3]);
-	playerone.splice(0, 4);
-	playertwo.splice(0, 4);
+	playerone.shift(0, 3);
+	playertwo.shift(0, 3);
 	console.log(playerone, playertwo, tabledeck);
 	console.log('fire for effect');
-	if (tabledeck[3].face > tabledeck[7].face) {
+	if (tabledeck[6].face > tabledeck[10].face) {
 			console.log(tabledeck.length);
 			playerone.push(tabledeck.length);
 			tabledeck.splice(tabledeck.length);
 			console.log('playerone won');
 			console.log(playerone, playertwo, tabledeck);
-		} else if (tabledeck[7].face > tabledeck[3].face) {
+		} else if (tabledeck[10].face > tabledeck[6].face) {
 			console.log(tabledeck.length);
 			playertwo.push(tabledeck.length);
 			tabledeck.splice(tabledeck.length);
 			console.log('playertwo won');
 			console.log(playerone, playertwo, tabledeck);
-		} else if (tabledeck[3].face = tabledeck[7].face) {
+		} else if (tabledeck[6].face = tabledeck[10].face) {
 			goToWar();
 			console.log('WAR!');
 			console.log(playerone, playertwo, tabledeck);
