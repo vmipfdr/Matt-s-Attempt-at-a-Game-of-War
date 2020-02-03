@@ -1,6 +1,6 @@
-#Matt's Game of War Re-imagined#
+# Matt's Game of War Re-imagined
 
-###Game of War
+### Game of War
 
 Remember the card game ["War"](https://bicyclecards.com/how-to-play/war/)?
 
