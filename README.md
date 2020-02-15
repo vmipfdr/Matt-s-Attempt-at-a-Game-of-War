@@ -4,6 +4,8 @@
 
 Remember the card game ["War"](https://bicyclecards.com/how-to-play/war/)?
 
+I deployed the game here:  https://vmipfdr.github.io/Matt-s-Game-of-War/
+
 Two players start the game by splitting a deck of 52 standard playing cards
 evenly. Each stack is facedown, and players cannot look at the cards in their
 stack or rearrange them.
