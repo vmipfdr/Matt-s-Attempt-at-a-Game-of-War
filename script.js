@@ -21,16 +21,16 @@ for (let i = 0; i < suits.length; i++){
 	}
 }
 let shuffle = (array) => {
-	for (var i = array.length - 1; i > 0; i--){
-		var j = Math.floor(Math.random()* (i + 1));
-		var temp = array[i];
+	for (let i = array.length - 1; i > 0; i--){
+		let j = Math.floor(Math.random()* (i + 1));
+		let temp = array[i];
 		array[i] = array [j];
 		array[j] = temp;
 	}
 	console.log('shuffled');
 	return array;
 }
-
+//based on rules, i should no use reshuffle at all
 let reShuffle = (array) => {
 	for (var i = array.length - 1; i > 0; i--){
 		var j = Math.floor(Math.random()* (i + 1));
@@ -42,7 +42,7 @@ let reShuffle = (array) => {
 	return array;
 }
 
-// shuffle(deck);
+shuffle(deck);
 // console.log('cards shuffled')
 
 let dealCards = () => {
@@ -50,9 +50,9 @@ let dealCards = () => {
 	playertwo = deck.splice(0, 26)
 }
 
-// dealCards(deck);
+dealCards(deck);
 // console.log('ammo distroed');
-// console.log(playerone, playertwo, tabledeck);
+console.log(playerone, playertwo, tabledeck);
 
 let flip = () => {
 	tabledeck.push(playerone[0], playertwo[0]);
@@ -76,12 +76,11 @@ let flip = () => {
 		console.log('WAR!')
 		console.log(playerone, playertwo, tabledeck);
 	}
-	reShuffle(playerone, playertwo);
 }
 
-// flip(tabledeck);
-// console.log('round complete');
-// console.log(playerone, playertwo, tabledeck);
+flip(tabledeck);
+console.log('round complete');
+console.log(playerone, playertwo, tabledeck);
 
 let goToWar = () => {
 	tabledeck.push(playerone[0], playerone[1], playerone[2], playerone[3], playertwo[0], playertwo[1], playertwo[2], playertwo[3]);
@@ -89,27 +88,30 @@ let goToWar = () => {
 	playertwo.shift(0, 3);
 	console.log(playerone, playertwo, tabledeck);
 	console.log('fire for effect');
-	if (tabledeck[6].face > tabledeck[10].face) {
+	if (tabledeck[5].face > tabledeck[9].face) {
 			console.log(tabledeck.length);
 			playerone.push(tabledeck.length);
 			tabledeck.splice(tabledeck.length);
 			console.log('playerone won');
 			console.log(playerone, playertwo, tabledeck);
-		} else if (tabledeck[10].face > tabledeck[6].face) {
+		} else if (tabledeck[9].face > tabledeck[5].face) {
 			console.log(tabledeck.length);
 			playertwo.push(tabledeck.length);
 			tabledeck.splice(tabledeck.length);
 			console.log('playertwo won');
 			console.log(playerone, playertwo, tabledeck);
-		} else if (tabledeck[6].face = tabledeck[10].face) {
+		} else if (tabledeck[5].face = tabledeck[9].face) {
 			goToWar();
 			console.log('WAR!');
 			console.log(playerone, playertwo, tabledeck);
 		}
 }
 
+//I need to make an if statement for players can't play 
 
-
+for (let i = 0; i < 100; i++) {
+	flip(playerone, playertwo);
+}
 
 
 
